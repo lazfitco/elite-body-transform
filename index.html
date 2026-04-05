@@ -1,8 +1,248 @@
 <!DOCTYPE html>
-<html>
-<body style="background:black; color:white; text-align:center; padding:50px;">
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elite Body Transform</title>
 
-<h1>PRUEBA NUEVA WEB 🔥</h1>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #000;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #0f0f0f;
+    border-bottom: 2px solid red;
+}
+
+.logo {
+    height: 95px;
+}
+
+.lang-buttons button {
+    background: red;
+    border: none;
+    color: white;
+    padding: 10px 14px;
+    margin-left: 8px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.hero {
+    text-align: center;
+    padding: 90px 20px 70px;
+    background: linear-gradient(to bottom, #111, #000);
+}
+
+.hero h1 {
+    font-size: 2.3rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: #ccc;
+    max-width: 700px;
+    margin: 0 auto 25px;
+}
+
+.cta-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: #111;
+    border: 1px solid red;
+    border-radius: 14px;
+    padding: 25px 20px;
+    width: 280px;
+    box-shadow: 0 0 12px rgba(255,0,0,0.15);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: red;
+    font-size: 1.4rem;
+}
+
+.card p {
+    color: #ddd;
+}
+
+.trans-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.trans-card {
+    background: #111;
+    border-radius: 14px;
+    padding: 15px;
+    width: 320px;
+    border: 1px solid #222;
+}
+
+.trans {
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.contact-box {
+    background: #111;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 25px;
+    border-radius: 14px;
+    border: 1px solid red;
+}
+
+a {
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 25px 15px;
+    color: #888;
+    border-top: 1px solid #222;
+    font-size: 0.95rem;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="logo.png" class="logo">
+    <div class="lang-buttons">
+        <button onclick="setLang('en')">EN</button>
+        <button onclick="setLang('es')">ES</button>
+    </div>
+</header>
+
+<section class="hero">
+    <h1 id="title">Transform your body. Become elite.</h1>
+    <p id="subtitle">Personalized coaching, structured training, and real discipline to help you build a stronger body and mindset.</p>
+    <button class="cta-btn" id="startBtn">Start Now</button>
+</section>
+
+<section class="section">
+    <h2 id="plansTitle">Programs</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Basic</h3>
+            <p id="basicDesc">Personalized workout plan designed for your goals and level.</p>
+        </div>
+
+        <div class="card">
+            <h3>Pro</h3>
+            <p id="proDesc">Workout plan plus nutrition guidance for faster and better results.</p>
+        </div>
+
+        <div class="card">
+            <h3>Elite</h3>
+            <p id="eliteDesc">Full coaching, deeper support, and a complete transformation approach.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2 id="transTitle">Transformations</h2>
+    <div class="trans-grid">
+        <div class="trans-card">
+            <img src="https://via.placeholder.com/300x300" class="trans">
+            <p id="trans1">Example result: -15 lbs in 12 weeks</p>
+        </div>
+
+        <div class="trans-card">
+            <img src="https://via.placeholder.com/300x300" class="trans">
+            <p id="trans2">Example result: muscle gain transformation</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2 id="contactTitle">Contact</h2>
+    <div class="contact-box">
+        <p id="contactText">Message me on Instagram to get started:</p>
+        <p><a href="https://instagram.com/lazfit_775" target="_blank">@lazfit_775</a></p>
+    </div>
+</section>
+
+<footer>
+    Elite Body Transform
+</footer>
+
+<script>
+function setLang(lang) {
+    if (lang === 'es') {
+        document.getElementById("title").innerText = "Transforma tu cuerpo. Sé élite.";
+        document.getElementById("subtitle").innerText = "Coaching personalizado, entrenamiento estructurado y disciplina real para ayudarte a construir un cuerpo y una mentalidad más fuertes.";
+        document.getElementById("startBtn").innerText = "Comenzar";
+        document.getElementById("plansTitle").innerText = "Planes";
+        document.getElementById("basicDesc").innerText = "Rutina personalizada diseñada para tu meta y tu nivel.";
+        document.getElementById("proDesc").innerText = "Rutina más guía nutricional para resultados más rápidos y mejores.";
+        document.getElementById("eliteDesc").innerText = "Coaching completo, soporte más cercano y un enfoque total de transformación.";
+        document.getElementById("transTitle").innerText = "Transformaciones";
+        document.getElementById("trans1").innerText = "Resultado de ejemplo: -15 libras en 12 semanas";
+        document.getElementById("trans2").innerText = "Resultado de ejemplo: transformación de ganancia muscular";
+        document.getElementById("contactTitle").innerText = "Contacto";
+        document.getElementById("contactText").innerText = "Escríbeme por Instagram para comenzar:";
+    } else {
+        document.getElementById("title").innerText = "Transform your body. Become elite.";
+        document.getElementById("subtitle").innerText = "Personalized coaching, structured training, and real discipline to help you build a stronger body and mindset.";
+        document.getElementById("startBtn").innerText = "Start Now";
+        document.getElementById("plansTitle").innerText = "Programs";
+        document.getElementById("basicDesc").innerText = "Personalized workout plan designed for your goals and level.";
+        document.getElementById("proDesc").innerText = "Workout plan plus nutrition guidance for faster and better results.";
+        document.getElementById("eliteDesc").innerText = "Full coaching, deeper support, and a complete transformation approach.";
+        document.getElementById("transTitle").innerText = "Transformations";
+        document.getElementById("trans1").innerText = "Example result: -15 lbs in 12 weeks";
+        document.getElementById("trans2").innerText = "Example result: muscle gain transformation";
+        document.getElementById("contactTitle").innerText = "Contact";
+        document.getElementById("contactText").innerText = "Message me on Instagram to get started:";
+    }
+}
+</script>
 
 </body>
 </html>
