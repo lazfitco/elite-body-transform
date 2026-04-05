@@ -54,18 +54,43 @@ Transform your body with personalized training plans.
 Follow me on Instagram
 </a>
 </p>
+<h2 id="plans-title">Training Plans</h2>
 
+<div id="plans">
+
+<p id="plan1">Basic Plan - 4 weeks program</p>
+<p id="plan2">Intermediate Plan - 8 weeks program</p>
+<p id="plan3">Personalized Coaching</p>
+
+<a href="https://instagram.com/lazfit_775" target="_blank">
+Contact me to get started
+</a>
+
+</div>
 </div>
 
 <script>
-function setLanguage(lang) {
+function setLanguage(lang) {function setLanguage(lang) {
     if (lang === 'es') {
         document.getElementById("title").innerText = "Transformación Corporal Elite";
         document.getElementById("description").innerText = "Transforma tu cuerpo con planes personalizados.";
+
+        document.getElementById("plans-title").innerText = "Planes de Entrenamiento";
+        document.getElementById("plan1").innerText = "Plan Básico - programa de 4 semanas";
+        document.getElementById("plan2").innerText = "Plan Intermedio - programa de 8 semanas";
+        document.getElementById("plan3").innerText = "Entrenamiento Personalizado";
+
     } else {
         document.getElementById("title").innerText = "Elite Body Transform";
         document.getElementById("description").innerText = "Transform your body with personalized training plans.";
+
+        document.getElementById("plans-title").innerText = "Training Plans";
+        document.getElementById("plan1").innerText = "Basic Plan - 4 weeks program";
+        document.getElementById("plan2").innerText = "Intermediate Plan - 8 weeks program";
+        document.getElementById("plan3").innerText = "Personalized Coaching";
     }
+}
+    
 }
 </script>
 
