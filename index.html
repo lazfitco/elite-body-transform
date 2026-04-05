@@ -11,89 +11,130 @@ body {
     font-family: Arial, sans-serif;
     background: black;
     color: white;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #111;
+}
+
+/* LOGO */
+.logo {
+    height: 90px;
+}
+
+/* BOTONES */
+button {
+    background: red;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+/* SECCIONES */
+.section {
+    padding: 60px 20px;
     text-align: center;
 }
 
-.container {
-    padding: 40px;
+/* CARDS */
+.card {
+    border: 1px solid red;
+    margin: 15px;
+    padding: 20px;
 }
 
-button {
-    background: red;
-    color: white;
-    border: none;
-    padding: 10px 20px;
+/* IMÁGENES */
+.trans {
+    width: 100%;
+    max-width: 300px;
     margin: 10px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-a {
-    color: red;
-    text-decoration: none;
-    font-weight: bold;
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<!-- HEADER CON LOGO -->
+<header>
+    <img src="logo.png" class="logo">
+    <div>
+        <button onclick="setLang('en')">EN</button>
+        <button onclick="setLang('es')">ES</button>
+    </div>
+</header>
 
-<h1 id="title">Elite Body Transform</h1>
-
-<p id="description">
-Transform your body with personalized training plans.
-</p>
-
-<button onclick="setLanguage('en')">English</button>
-<button onclick="setLanguage('es')">Español</button>
-
-<p>
-</p>
-<h2 id="plans-title">Training Plans</h2>
-
-<a href="https://instagram.com/lazfit_775" target="_blank">
-Follow me on Instagram
-</a>
-<div id="plans">
-
-<p id="plan1">Basic Plan - 4 weeks program</p>
-<p id="plan2">Intermediate Plan - 8 weeks program</p>
-<p id="plan3">Personalized Coaching</p>
-
-<a href="https://instagram.com/lazfit_775" target="_blank">
-Contact me to get started
-</a>
-
+<!-- HOME -->
+<div class="section">
+    <h1 id="title">Transform your body. Become elite.</h1>
+    <button id="startBtn">Start Now</button>
 </div>
+
+<!-- PLANES -->
+<div class="section">
+    <h2 id="plansTitle">Programs</h2>
+
+    <div class="card">
+        <h3>Basic</h3>
+        <p id="basicDesc">Personalized workout plan</p>
+    </div>
+
+    <div class="card">
+        <h3>Pro</h3>
+        <p id="proDesc">Workout + nutrition plan</p>
+    </div>
+
+    <div class="card">
+        <h3>Elite</h3>
+        <p id="eliteDesc">Full coaching + daily support</p>
+    </div>
+</div>
+
+<!-- TRANSFORMACIONES -->
+<div class="section">
+    <h2 id="transTitle">Transformations</h2>
+
+    <img src="https://via.placeholder.com/300x300" class="trans">
+    <p>-15 lbs in 12 weeks</p>
+
+    <img src="https://via.placeholder.com/300x300" class="trans">
+    <p>Muscle gain transformation</p>
+</div>
+
+<!-- CONTACTO -->
+<div class="section">
+    <h2 id="contactTitle">Contact</h2>
+    <p>Instagram: <a href="https://instagram.com/lazfit_775" target="_blank">@lazfit_775</a></p>
 </div>
 
 <script>
-
-    }
-}
-    
-}
-</script>
-<script>
-function setLanguage(lang) {
-    if (lang === 'es') {
-        document.getElementById("title").innerText = "Transformación Corporal Elite";
-        document.getElementById("description").innerText = "Transforma tu cuerpo con planes de entrenamiento personalizados.";
-        document.getElementById("plans-title").innerText = "Planes de Entrenamiento";
-        document.getElementById("plan1").innerText = "Plan Básico - programa de 4 semanas";
-        document.getElementById("plan2").innerText = "Plan Intermedio - programa de 8 semanas";
-        document.getElementById("plan3").innerText = "Entrenamiento Personalizado";
+function setLang(lang) {
+    if(lang === 'es') {
+        document.getElementById("title").innerText = "Transforma tu cuerpo. Sé elite.";
+        document.getElementById("startBtn").innerText = "Comenzar";
+        document.getElementById("plansTitle").innerText = "Planes";
+        document.getElementById("basicDesc").innerText = "Rutina personalizada";
+        document.getElementById("proDesc").innerText = "Rutina + nutrición";
+        document.getElementById("eliteDesc").innerText = "Coaching completo + soporte diario";
+        document.getElementById("transTitle").innerText = "Transformaciones";
+        document.getElementById("contactTitle").innerText = "Contacto";
     } else {
-        document.getElementById("title").innerText = "Elite Body Transform";
-        document.getElementById("description").innerText = "Transform your body with personalized training plans.";
-        document.getElementById("plans-title").innerText = "Training Plans";
-        document.getElementById("plan1").innerText = "Basic Plan - 4 weeks program";
-        document.getElementById("plan2").innerText = "Intermediate Plan - 8 weeks program";
-        document.getElementById("plan3").innerText = "Personalized Coaching";
+        document.getElementById("title").innerText = "Transform your body. Become elite.";
+        document.getElementById("startBtn").innerText = "Start Now";
+        document.getElementById("plansTitle").innerText = "Programs";
+        document.getElementById("basicDesc").innerText = "Personalized workout plan";
+        document.getElementById("proDesc").innerText = "Workout + nutrition plan";
+        document.getElementById("eliteDesc").innerText = "Full coaching + daily support";
+        document.getElementById("transTitle").innerText = "Transformations";
+        document.getElementById("contactTitle").innerText = "Contact";
     }
 }
 </script>
+
 </body>
 </html>
