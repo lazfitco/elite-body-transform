@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport"e content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Elite Body Transform</title>
 
 <style>
@@ -44,7 +44,7 @@ header {
 }
 
 .hero h1 {
-    font-size: 2.3rem;
+    font-size: 2.5rem;
     margin-bottom: 15px;
 }
 
@@ -55,15 +55,16 @@ header {
     margin: 0 auto 25px;
 }
 
-.cta-btn {
+.start-top {
+    display: inline-block;
     background: red;
-    color: white;
-    border: none;
+    color: white !important;
     padding: 14px 24px;
-    font-size: 1rem;
-    font-weight: bold;
     border-radius: 10px;
-    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 10px;
 }
 
 .section {
@@ -117,11 +118,14 @@ header {
     border: 1px solid #222;
 }
 
+.trans-wrapper {
+    display: flex;
+    gap: 10px;
+}
+
 .trans {
-    width: 100%;
-    border-radius: 12px;
-    display: block;
-    margin-bottom: 12px;
+    width: 50%;
+    border-radius: 10px;
 }
 
 .contact-box {
@@ -152,7 +156,7 @@ footer {
 <body>
 
 <header>
-    <img src="logo.png" class="logo">
+    <img src="logo.png" class="logo" alt="Elite Body Transform Logo">
     <div class="lang-buttons">
         <button onclick="setLang('en')">EN</button>
         <button onclick="setLang('es')">ES</button>
@@ -162,7 +166,7 @@ footer {
 <section class="hero">
     <h1 id="title">Transform your body. Become elite.</h1>
     <p id="subtitle">Personalized coaching, structured training, and real discipline to help you build a stronger body and mindset.</p>
-    <button class="cta-btn" id="startBtn">Start Now</button>
+    <a href="https://www.instagram.com/lazfit_775/" class="start-top" id="startBtn">Start Now</a>
 </section>
 
 <section class="section">
@@ -186,16 +190,67 @@ footer {
 </section>
 
 <section class="section">
+    <h2 id="whyTitle">Why choose me</h2>
+    <div class="cards">
+        <div class="card">
+            <h3 id="whyCard1Title">Personalized Plans</h3>
+            <p id="whyCard1Text">No generic routines. Everything is built for your body and goals.</p>
+        </div>
+
+        <div class="card">
+            <h3 id="whyCard2Title">Real Discipline</h3>
+            <p id="whyCard2Text">I focus on mindset and consistency, not shortcuts.</p>
+        </div>
+
+        <div class="card">
+            <h3 id="whyCard3Title">Proven Methods</h3>
+            <p id="whyCard3Text">Training and nutrition strategies that actually work.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2 id="servicesTitle">Coaching Services</h2>
+    <div class="cards">
+        <div class="card">
+            <h3 id="service1Title">Custom Training Plan</h3>
+            <p id="service1Text">Structured workouts tailored to your body, goals, and experience level.</p>
+        </div>
+
+        <div class="card">
+            <h3 id="service2Title">Nutrition Guidance</h3>
+            <p id="service2Text">Simple and effective nutrition strategies to help you lose fat or build muscle.</p>
+        </div>
+
+        <div class="card">
+            <h3 id="service3Title">Weekly Check-ins</h3>
+            <p id="service3Text">Progress tracking, adjustments, and accountability every week.</p>
+        </div>
+
+        <div class="card">
+            <h3 id="service4Title">Online Coaching</h3>
+            <p id="service4Text">Full remote support with direct communication and continuous guidance.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
     <h2 id="transTitle">Transformations</h2>
     <div class="trans-grid">
         <div class="trans-card">
-            <img src="https://via.placeholder.com/300x300" class="trans">
-            <p id="trans1">Example result: -15 lbs in 12 weeks</p>
+            <div class="trans-wrapper">
+                <img src="https://via.placeholder.com/150" class="trans">
+                <img src="https://via.placeholder.com/150" class="trans">
+            </div>
+            <p id="trans1">Your transformation could be next</p>
         </div>
 
         <div class="trans-card">
-            <img src="https://via.placeholder.com/300x300" class="trans">
-            <p id="trans2">Example result: muscle gain transformation</p>
+            <div class="trans-wrapper">
+                <img src="https://via.placeholder.com/150" class="trans">
+                <img src="https://via.placeholder.com/150" class="trans">
+            </div>
+            <p id="trans2">Real results start with discipline</p>
         </div>
     </div>
 </section>
@@ -204,7 +259,7 @@ footer {
     <h2 id="contactTitle">Contact</h2>
     <div class="contact-box">
         <p id="contactText">Message me on Instagram to get started:</p>
-        <p><a href="https://instagram.com/lazfit_775" target="_blank">@lazfit_775</a></p>
+        <p><a href="https://www.instagram.com/lazfit_775/">@lazfit_775</a></p>
     </div>
 </section>
 
@@ -222,9 +277,25 @@ function setLang(lang) {
         document.getElementById("basicDesc").innerText = "Rutina personalizada diseñada para tu meta y tu nivel.";
         document.getElementById("proDesc").innerText = "Rutina más guía nutricional para resultados más rápidos y mejores.";
         document.getElementById("eliteDesc").innerText = "Coaching completo, soporte más cercano y un enfoque total de transformación.";
+        document.getElementById("whyTitle").innerText = "Por qué elegirme";
+        document.getElementById("whyCard1Title").innerText = "Planes Personalizados";
+        document.getElementById("whyCard1Text").innerText = "Nada de rutinas genéricas. Todo está hecho para tu cuerpo y tus metas.";
+        document.getElementById("whyCard2Title").innerText = "Disciplina Real";
+        document.getElementById("whyCard2Text").innerText = "Me enfoco en mentalidad y constancia, no en atajos.";
+        document.getElementById("whyCard3Title").innerText = "Métodos Probados";
+        document.getElementById("whyCard3Text").innerText = "Estrategias de entrenamiento y nutrición que realmente funcionan.";
+        document.getElementById("servicesTitle").innerText = "Servicios de Coaching";
+        document.getElementById("service1Title").innerText = "Plan de Entrenamiento Personalizado";
+        document.getElementById("service1Text").innerText = "Entrenamientos estructurados según tu cuerpo, metas y nivel de experiencia.";
+        document.getElementById("service2Title").innerText = "Guía Nutricional";
+        document.getElementById("service2Text").innerText = "Estrategias simples y efectivas para perder grasa o ganar músculo.";
+        document.getElementById("service3Title").innerText = "Seguimiento Semanal";
+        document.getElementById("service3Text").innerText = "Monitoreo de progreso, ajustes y responsabilidad cada semana.";
+        document.getElementById("service4Title").innerText = "Coaching Online";
+        document.getElementById("service4Text").innerText = "Soporte completo a distancia con comunicación directa y guía continua.";
         document.getElementById("transTitle").innerText = "Transformaciones";
-        document.getElementById("trans1").innerText = "Resultado de ejemplo: -15 libras en 12 semanas";
-        document.getElementById("trans2").innerText = "Resultado de ejemplo: transformación de ganancia muscular";
+        document.getElementById("trans1").innerText = "Tu transformación puede ser la siguiente";
+        document.getElementById("trans2").innerText = "Los resultados reales empiezan con disciplina";
         document.getElementById("contactTitle").innerText = "Contacto";
         document.getElementById("contactText").innerText = "Escríbeme por Instagram para comenzar:";
     } else {
@@ -235,14 +306,24 @@ function setLang(lang) {
         document.getElementById("basicDesc").innerText = "Personalized workout plan designed for your goals and level.";
         document.getElementById("proDesc").innerText = "Workout plan plus nutrition guidance for faster and better results.";
         document.getElementById("eliteDesc").innerText = "Full coaching, deeper support, and a complete transformation approach.";
+        document.getElementById("whyTitle").innerText = "Why choose me";
+        document.getElementById("whyCard1Title").innerText = "Personalized Plans";
+        document.getElementById("whyCard1Text").innerText = "No generic routines. Everything is built for your body and goals.";
+        document.getElementById("whyCard2Title").innerText = "Real Discipline";
+        document.getElementById("whyCard2Text").innerText = "I focus on mindset and consistency, not shortcuts.";
+        document.getElementById("whyCard3Title").innerText = "Proven Methods";
+        document.getElementById("whyCard3Text").innerText = "Training and nutrition strategies that actually work.";
+        document.getElementById("servicesTitle").innerText = "Coaching Services";
+        document.getElementById("service1Title").innerText = "Custom Training Plan";
+        document.getElementById("service1Text").innerText = "Structured workouts tailored to your body, goals, and experience level.";
+        document.getElementById("service2Title").innerText = "Nutrition Guidance";
+        document.getElementById("service2Text").innerText = "Simple and effective nutrition strategies to help you lose fat or build muscle.";
+        document.getElementById("service3Title").innerText = "Weekly Check-ins";
+        document.getElementById("service3Text").innerText = "Progress tracking, adjustments, and accountability every week.";
+        document.getElementById("service4Title").innerText = "Online Coaching";
+        document.getElementById("service4Text").innerText = "Full remote support with direct communication and continuous guidance.";
         document.getElementById("transTitle").innerText = "Transformations";
-        document.getElementById("trans1").innerText = "Example result: -15 lbs in 12 weeks";
-        document.getElementById("trans2").innerText = "Example result: muscle gain transformation";
+        document.getElementById("trans1").innerText = "Your transformation could be next";
+        document.getElementById("trans2").innerText = "Real results start with discipline";
         document.getElementById("contactTitle").innerText = "Contact";
         document.getElementById("contactText").innerText = "Message me on Instagram to get started:";
-    }
-}
-</script>
-
-</body>
-</html>
