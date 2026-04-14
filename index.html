@@ -1,329 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Elite Body Transform</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elite Body Transform</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #000;
-    color: white;
-}
+    body {
+      background: #0d0d0d;
+      color: white;
+      line-height: 1.6;
+    }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    background: #0f0f0f;
-    border-bottom: 2px solid red;
-}
+    header {
+      background: linear-gradient(135deg, #000000, #1a1a1a);
+      text-align: center;
+      padding: 40px 20px;
+      border-bottom: 3px solid #e10600;
+    }
 
-.logo {
-    height: 95px;
-}
+    .logo {
+      max-width: 140px;
+      margin-bottom: 20px;
+    }
 
-.lang-buttons button {
-    background: red;
-    border: none;
-    color: white;
-    padding: 10px 14px;
-    margin-left: 8px;
-    cursor: pointer;
-    border-radius: 8px;
-    font-weight: bold;
-}
+    h1 {
+      font-size: 2.2rem;
+      color: #e10600;
+      margin-bottom: 10px;
+    }
 
-.hero {
-    text-align: center;
-    padding: 90px 20px 70px;
-    background: linear-gradient(to bottom, #111, #000);
-}
+    .subtitle {
+      font-size: 1.1rem;
+      color: #f5f5f5;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
 
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-}
+    .language-switch {
+      margin-top: 20px;
+    }
 
-.hero p {
-    font-size: 1.1rem;
-    color: #ccc;
-    max-width: 700px;
-    margin: 0 auto 25px;
-}
+    .language-switch button {
+      background: #e10600;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      margin: 5px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
 
-.start-top {
-    display: inline-block;
-    background: red;
-    color: white !important;
-    padding: 14px 24px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1rem;
-    margin-top: 10px;
-}
+    .language-switch button:hover {
+      opacity: 0.9;
+    }
 
-.section {
-    padding: 60px 20px;
-    text-align: center;
-}
+    .cta-buttons {
+      margin-top: 25px;
+    }
 
-.section h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
-}
+    .cta-buttons a {
+      text-decoration: none;
+    }
 
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
+    .cta-buttons button {
+      background: #e10600;
+      color: white;
+      border: none;
+      padding: 14px 22px;
+      margin: 8px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+    }
 
-.card {
-    background: #111;
-    border: 1px solid red;
-    border-radius: 14px;
-    padding: 25px 20px;
-    width: 280px;
-    box-shadow: 0 0 12px rgba(255,0,0,0.15);
-}
+    .cta-buttons button:hover {
+      opacity: 0.9;
+    }
 
-.card h3 {
-    margin-top: 0;
-    color: red;
-    font-size: 1.4rem;
-}
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
 
-.card p {
-    color: #ddd;
-}
+    h2 {
+      color: #e10600;
+      margin-bottom: 15px;
+      text-align: center;
+      font-size: 1.8rem;
+    }
 
-.trans-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-}
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
 
-.trans-card {
-    background: #111;
-    border-radius: 14px;
-    padding: 15px;
-    width: 320px;
-    border: 1px solid #222;
-}
+    .card {
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 14px;
+      border: 1px solid #333;
+      text-align: center;
+    }
 
-.trans-wrapper {
-    display: flex;
-    gap: 10px;
-}
+    .card h3 {
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
 
-.trans {
-    width: 50%;
-    border-radius: 10px;
-}
+    .card p {
+      color: #d9d9d9;
+    }
 
-.contact-box {
-    background: #111;
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 25px;
-    border-radius: 14px;
-    border: 1px solid red;
-}
-
-a {
-    color: red;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-footer {
-    text-align: center;
-    padding: 25px 15px;
-    color: #888;
-    border-top: 1px solid #222;
-    font-size: 0.95rem;
-}
-</style>
+    footer {
+      text-align: center;
+      padding: 25px 20px;
+      background: #000;
+      border-top: 2px solid #e10600;
+      color: #ccc;
+    }
+  </style>
 </head>
-
 <body>
 
-<header>
-    <img src="logo.png" class="logo" alt="Elite Body Transform Logo">
-    <div class="lang-buttons">
-        <button onclick="setLang('en')">EN</button>
-        <button onclick="setLang('es')">ES</button>
+  <header>
+    <img src="logo.png" alt="Elite Body Transform Logo" class="logo">
+
+    <h1 id="title">Elite Body Transform</h1>
+    <p class="subtitle" id="subtitle">
+      Personalized coaching to help you lose fat, build muscle, and transform your body.
+    </p>
+
+    <div class="language-switch">
+      <button onclick="setLanguage('en')">English</button>
+      <button onclick="setLanguage('es')">Español</button>
     </div>
-</header>
 
-<section class="hero">
-    <h1 id="title">Transform your body. Become elite.</h1>
-    <p id="subtitle">Personalized coaching, structured training, and real discipline to help you build a stronger body and mindset.</p>
-    <a href="https://www.instagram.com/lazfit_775/" class="start-top" id="startBtn">Start Now</a>
-</section>
+    <div class="cta-buttons">
+      <a href="https://instagram.com/lazfit_775" target="_blank">
+        <button id="instagramBtn">Instagram</button>
+      </a>
 
-<section class="section">
-    <h2 id="plansTitle">Programs</h2>
+      <a href="https://wa.me/17135551234?text=Hola%20quiero%20informaci%C3%B3n%20sobre%20los%20planes" target="_blank">
+        <button id="whatsappBtn">WhatsApp</button>
+      </a>
+
+      <a href="https://instagram.com/lazfit_775" target="_blank">
+        <button id="startBtn">Start Now</button>
+      </a>
+    </div>
+  </header>
+
+  <section>
+    <h2 id="servicesTitle">Services</h2>
     <div class="cards">
-        <div class="card">
-            <h3>Basic</h3>
-            <p id="basicDesc">Personalized workout plan designed for your goals and level.</p>
-        </div>
+      <div class="card">
+        <h3 id="card1Title">Fat Loss</h3>
+        <p id="card1Text">Custom training and nutrition guidance designed to help you burn fat effectively.</p>
+      </div>
 
-        <div class="card">
-            <h3>Pro</h3>
-            <p id="proDesc">Workout plan plus nutrition guidance for faster and better results.</p>
-        </div>
+      <div class="card">
+        <h3 id="card2Title">Muscle Gain</h3>
+        <p id="card2Text">Structured programs focused on building size, strength, and a better physique.</p>
+      </div>
 
-        <div class="card">
-            <h3>Elite</h3>
-            <p id="eliteDesc">Full coaching, deeper support, and a complete transformation approach.</p>
-        </div>
+      <div class="card">
+        <h3 id="card3Title">Personalized Plans</h3>
+        <p id="card3Text">A coaching plan adapted to your body, goals, and lifestyle.</p>
+      </div>
     </div>
-</section>
+  </section>
 
-<section class="section">
-    <h2 id="whyTitle">Why choose me</h2>
+  <section>
+    <h2 id="whyTitle">Why Choose Me</h2>
     <div class="cards">
-        <div class="card">
-            <h3 id="whyCard1Title">Personalized Plans</h3>
-            <p id="whyCard1Text">No generic routines. Everything is built for your body and goals.</p>
-        </div>
+      <div class="card">
+        <h3 id="why1Title">Personal Attention</h3>
+        <p id="why1Text">Every client gets a plan made for their specific goals and needs.</p>
+      </div>
 
-        <div class="card">
-            <h3 id="whyCard2Title">Real Discipline</h3>
-            <p id="whyCard2Text">I focus on mindset and consistency, not shortcuts.</p>
-        </div>
+      <div class="card">
+        <h3 id="why2Title">Real Results</h3>
+        <p id="why2Text">My goal is to help you build a stronger, leaner, and healthier body.</p>
+      </div>
 
-        <div class="card">
-            <h3 id="whyCard3Title">Proven Methods</h3>
-            <p id="whyCard3Text">Training and nutrition strategies that actually work.</p>
-        </div>
+      <div class="card">
+        <h3 id="why3Title">Online Coaching</h3>
+        <p id="why3Text">Work with me from anywhere in the USA and beyond.</p>
+      </div>
     </div>
-</section>
+  </section>
 
-<section class="section">
-    <h2 id="servicesTitle">Coaching Services</h2>
-    <div class="cards">
-        <div class="card">
-            <h3 id="service1Title">Custom Training Plan</h3>
-            <p id="service1Text">Structured workouts tailored to your body, goals, and experience level.</p>
-        </div>
+  <footer>
+    <p id="footerText">© 2026 Elite Body Transform. All rights reserved.</p>
+  </footer>
 
-        <div class="card">
-            <h3 id="service2Title">Nutrition Guidance</h3>
-            <p id="service2Text">Simple and effective nutrition strategies to help you lose fat or build muscle.</p>
-        </div>
+  <script>
+    const translations = {
+      en: {
+        title: "Elite Body Transform",
+        subtitle: "Personalized coaching to help you lose fat, build muscle, and transform your body.",
+        instagramBtn: "Instagram",
+        whatsappBtn: "WhatsApp",
+        startBtn: "Start Now",
+        servicesTitle: "Services",
+        card1Title: "Fat Loss",
+        card1Text: "Custom training and nutrition guidance designed to help you burn fat effectively.",
+        card2Title: "Muscle Gain",
+        card2Text: "Structured programs focused on building size, strength, and a better physique.",
+        card3Title: "Personalized Plans",
+        card3Text: "A coaching plan adapted to your body, goals, and lifestyle.",
+        whyTitle: "Why Choose Me",
+        why1Title: "Personal Attention",
+        why1Text: "Every client gets a plan made for their specific goals and needs.",
+        why2Title: "Real Results",
+        why2Text: "My goal is to help you build a stronger, leaner, and healthier body.",
+        why3Title: "Online Coaching",
+        why3Text: "Work with me from anywhere in the USA and beyond.",
+        footerText: "© 2026 Elite Body Transform. All rights reserved."
+      },
+      es: {
+        title: "Elite Body Transform",
+        subtitle: "Coaching personalizado para ayudarte a perder grasa, ganar músculo y transformar tu cuerpo.",
+        instagramBtn: "Instagram",
+        whatsappBtn: "WhatsApp",
+        startBtn: "Empieza Ahora",
+        servicesTitle: "Servicios",
+        card1Title: "Pérdida de Grasa",
+        card1Text: "Entrenamiento y guía nutricional personalizada para ayudarte a quemar grasa de forma efectiva.",
+        card2Title: "Ganancia Muscular",
+        card2Text: "Programas estructurados enfocados en desarrollar masa muscular, fuerza y un mejor físico.",
+        card3Title: "Planes Personalizados",
+        card3Text: "Un plan de coaching adaptado a tu cuerpo, objetivos y estilo de vida.",
+        whyTitle: "Por Qué Elegirme",
+        why1Title: "Atención Personal",
+        why1Text: "Cada cliente recibe un plan hecho según sus metas y necesidades.",
+        why2Title: "Resultados Reales",
+        why2Text: "Mi objetivo es ayudarte a construir un cuerpo más fuerte, definido y saludable.",
+        why3Title: "Coaching Online",
+        why3Text: "Trabaja conmigo desde cualquier lugar de USA y más allá.",
+        footerText: "© 2026 Elite Body Transform. Todos los derechos reservados."
+      }
+    };
 
-        <div class="card">
-            <h3 id="service3Title">Weekly Check-ins</h3>
-            <p id="service3Text">Progress tracking, adjustments, and accountability every week.</p>
-        </div>
+    function setLanguage(lang) {
+      document.documentElement.lang = lang;
+      for (const id in translations[lang]) {
+        const element = document.getElementById(id);
+        if (element) {
+          element.textContent = translations[lang][id];
+        }
+      }
+      localStorage.setItem("selectedLanguage", lang);
+    }
 
-        <div class="card">
-            <h3 id="service4Title">Online Coaching</h3>
-            <p id="service4Text">Full remote support with direct communication and continuous guidance.</p>
-        </div>
-    </div>
-</section>
+    const savedLanguage = localStorage.getItem("selectedLanguage") || "en";
+    setLanguage(savedLanguage);
+  </script>
 
-<section class="section">
-    <h2 id="transTitle">Transformations</h2>
-    <div class="trans-grid">
-        <div class="trans-card">
-            <div class="trans-wrapper">
-                <img src="https://via.placeholder.com/150" class="trans">
-                <img src="https://via.placeholder.com/150" class="trans">
-            </div>
-            <p id="trans1">Your transformation could be next</p>
-        </div>
-
-        <div class="trans-card">
-            <div class="trans-wrapper">
-                <img src="https://via.placeholder.com/150" class="trans">
-                <img src="https://via.placeholder.com/150" class="trans">
-            </div>
-            <p id="trans2">Real results start with discipline</p>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <h2 id="contactTitle">Contact</h2>
-    <div class="contact-box">
-        <p id="contactText">Message me on Instagram to get started:</p>
-        <p><a href="https://www.instagram.com/lazfit_775/">@lazfit_775</a></p>
-    </div>
-</section>
-
-<footer>
-    Elite Body Transform
-</footer>
-
-<script>
-function setLang(lang) {
-    if (lang === 'es') {
-        document.getElementById("title").innerText = "Transforma tu cuerpo. Sé élite.";
-        document.getElementById("subtitle").innerText = "Coaching personalizado, entrenamiento estructurado y disciplina real para ayudarte a construir un cuerpo y una mentalidad más fuertes.";
-        document.getElementById("startBtn").innerText = "Comenzar";
-        document.getElementById("plansTitle").innerText = "Planes";
-        document.getElementById("basicDesc").innerText = "Rutina personalizada diseñada para tu meta y tu nivel.";
-        document.getElementById("proDesc").innerText = "Rutina más guía nutricional para resultados más rápidos y mejores.";
-        document.getElementById("eliteDesc").innerText = "Coaching completo, soporte más cercano y un enfoque total de transformación.";
-        document.getElementById("whyTitle").innerText = "Por qué elegirme";
-        document.getElementById("whyCard1Title").innerText = "Planes Personalizados";
-        document.getElementById("whyCard1Text").innerText = "Nada de rutinas genéricas. Todo está hecho para tu cuerpo y tus metas.";
-        document.getElementById("whyCard2Title").innerText = "Disciplina Real";
-        document.getElementById("whyCard2Text").innerText = "Me enfoco en mentalidad y constancia, no en atajos.";
-        document.getElementById("whyCard3Title").innerText = "Métodos Probados";
-        document.getElementById("whyCard3Text").innerText = "Estrategias de entrenamiento y nutrición que realmente funcionan.";
-        document.getElementById("servicesTitle").innerText = "Servicios de Coaching";
-        document.getElementById("service1Title").innerText = "Plan de Entrenamiento Personalizado";
-        document.getElementById("service1Text").innerText = "Entrenamientos estructurados según tu cuerpo, metas y nivel de experiencia.";
-        document.getElementById("service2Title").innerText = "Guía Nutricional";
-        document.getElementById("service2Text").innerText = "Estrategias simples y efectivas para perder grasa o ganar músculo.";
-        document.getElementById("service3Title").innerText = "Seguimiento Semanal";
-        document.getElementById("service3Text").innerText = "Monitoreo de progreso, ajustes y responsabilidad cada semana.";
-        document.getElementById("service4Title").innerText = "Coaching Online";
-        document.getElementById("service4Text").innerText = "Soporte completo a distancia con comunicación directa y guía continua.";
-        document.getElementById("transTitle").innerText = "Transformaciones";
-        document.getElementById("trans1").innerText = "Tu transformación puede ser la siguiente";
-        document.getElementById("trans2").innerText = "Los resultados reales empiezan con disciplina";
-        document.getElementById("contactTitle").innerText = "Contacto";
-        document.getElementById("contactText").innerText = "Escríbeme por Instagram para comenzar:";
-    } else {
-        document.getElementById("title").innerText = "Transform your body. Become elite.";
-        document.getElementById("subtitle").innerText = "Personalized coaching, structured training, and real discipline to help you build a stronger body and mindset.";
-        document.getElementById("startBtn").innerText = "Start Now";
-        document.getElementById("plansTitle").innerText = "Programs";
-        document.getElementById("basicDesc").innerText = "Personalized workout plan designed for your goals and level.";
-        document.getElementById("proDesc").innerText = "Workout plan plus nutrition guidance for faster and better results.";
-        document.getElementById("eliteDesc").innerText = "Full coaching, deeper support, and a complete transformation approach.";
-        document.getElementById("whyTitle").innerText = "Why choose me";
-        document.getElementById("whyCard1Title").innerText = "Personalized Plans";
-        document.getElementById("whyCard1Text").innerText = "No generic routines. Everything is built for your body and goals.";
-        document.getElementById("whyCard2Title").innerText = "Real Discipline";
-        document.getElementById("whyCard2Text").innerText = "I focus on mindset and consistency, not shortcuts.";
-        document.getElementById("whyCard3Title").innerText = "Proven Methods";
-        document.getElementById("whyCard3Text").innerText = "Training and nutrition strategies that actually work.";
-        document.getElementById("servicesTitle").innerText = "Coaching Services";
-        document.getElementById("service1Title").innerText = "Custom Training Plan";
-        document.getElementById("service1Text").innerText = "Structured workouts tailored to your body, goals, and experience level.";
-        document.getElementById("service2Title").innerText = "Nutrition Guidance";
-        document.getElementById("service2Text").innerText = "Simple and effective nutrition strategies to help you lose fat or build muscle.";
-        document.getElementById("service3Title").innerText = "Weekly Check-ins";
-        document.getElementById("service3Text").innerText = "Progress tracking, adjustments, and accountability every week.";
-        document.getElementById("service4Title").innerText = "Online Coaching";
-        document.getElementById("service4Text").innerText = "Full remote support with direct communication and continuous guidance.";
-        document.getElementById("transTitle").innerText = "Transformations";
-        document.getElementById("trans1").innerText = "Your transformation could be next";
-        document.getElementById("trans2").innerText = "Real results start with discipline";
-        document.getElementById("contactTitle").innerText = "Contact";
-        document.getElementById("contactText").innerText = "Message me on Instagram to get started:";
+</body>
+</html>
