@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Elite Body Transform</title>
+
   <style>
     * {
       box-sizing: border-box;
@@ -58,10 +59,6 @@
       font-weight: bold;
     }
 
-    .language-switch button:hover {
-      opacity: 0.9;
-    }
-
     .cta-buttons {
       margin-top: 25px;
     }
@@ -82,10 +79,6 @@
       font-weight: bold;
     }
 
-    .cta-buttons button:hover {
-      opacity: 0.9;
-    }
-
     section {
       padding: 40px 20px;
       max-width: 1000px;
@@ -96,7 +89,6 @@
       color: #e10600;
       margin-bottom: 15px;
       text-align: center;
-      font-size: 1.8rem;
     }
 
     .cards {
@@ -114,160 +106,167 @@
       text-align: center;
     }
 
-    .card h3 {
-      color: #ffffff;
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      color: #d9d9d9;
-    }
-
     footer {
       text-align: center;
-      padding: 25px 20px;
+      padding: 25px;
       background: #000;
       border-top: 2px solid #e10600;
       color: #ccc;
     }
   </style>
 </head>
+
 <body>
 
-  <header>
-    <img src="logo.png" alt="Elite Body Transform Logo" class="logo">
+<header>
 
-    <h1 id="title">Elite Body Transform</h1>
-    <p class="subtitle" id="subtitle">
-      Personalized coaching to help you lose fat, build muscle, and transform your body.
-    </p>
+  <img src="logo.png" class="logo">
 
-    <div class="language-switch">
-      <button onclick="setLanguage('en')">English</button>
-      <button onclick="setLanguage('es')">Español</button>
+  <h1 id="title">Elite Body Transform</h1>
+
+  <p class="subtitle" id="subtitle">
+    Personalized coaching to help you lose fat, build muscle, and transform your body.
+  </p>
+
+  <div class="language-switch">
+    <button onclick="setLanguage('en')">English</button>
+    <button onclick="setLanguage('es')">Español</button>
+  </div>
+
+  <div class="cta-buttons">
+
+    <!-- Instagram -->
+    <a href="https://instagram.com/lazfit_775" target="_blank">
+      <button id="instagramBtn">Instagram</button>
+    </a>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/13463839126?text=Hola%20quiero%20información%20sobre%20los%20planes" target="_blank">
+      <button id="whatsappBtn">WhatsApp</button>
+    </a>
+
+    <!-- Start Now (ARREGLADO → WhatsApp) -->
+    <a href="https://wa.me/13463839126?text=Hola%20quiero%20información%20sobre%20los%20planes" target="_blank">
+      <button id="startBtn">Start Now</button>
+    </a>
+
+  </div>
+
+</header>
+
+<section>
+  <h2 id="servicesTitle">Services</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3 id="card1Title">Fat Loss</h3>
+      <p id="card1Text">Custom training and nutrition guidance to burn fat effectively.</p>
     </div>
 
-    <div class="cta-buttons">
-      <a href="https://instagram.com/lazfit_775" target="_blank">
-        <button id="instagramBtn">Instagram</button>
-      </a>
-
-      <a href="https://wa.me/3463839126?text=Hola%20quiero%20informaci%C3%B3n%20sobre%20los%20planes" target="_blank">
-        <button id="whatsappBtn">WhatsApp</button>
-      </a>
-
-      <a href="https://instagram.com/lazfit_775" target="_blank">
-        <button id="startBtn">Start Now</button>
-      </a>
+    <div class="card">
+      <h3 id="card2Title">Muscle Gain</h3>
+      <p id="card2Text">Programs focused on building muscle and strength.</p>
     </div>
-  </header>
 
-  <section>
-    <h2 id="servicesTitle">Services</h2>
-    <div class="cards">
-      <div class="card">
-        <h3 id="card1Title">Fat Loss</h3>
-        <p id="card1Text">Custom training and nutrition guidance designed to help you burn fat effectively.</p>
-      </div>
-
-      <div class="card">
-        <h3 id="card2Title">Muscle Gain</h3>
-        <p id="card2Text">Structured programs focused on building size, strength, and a better physique.</p>
-      </div>
-
-      <div class="card">
-        <h3 id="card3Title">Personalized Plans</h3>
-        <p id="card3Text">A coaching plan adapted to your body, goals, and lifestyle.</p>
-      </div>
+    <div class="card">
+      <h3 id="card3Title">Personalized Plans</h3>
+      <p id="card3Text">Plans adapted to your body and lifestyle.</p>
     </div>
-  </section>
 
-  <section>
-    <h2 id="whyTitle">Why Choose Me</h2>
-    <div class="cards">
-      <div class="card">
-        <h3 id="why1Title">Personal Attention</h3>
-        <p id="why1Text">Every client gets a plan made for their specific goals and needs.</p>
-      </div>
+  </div>
+</section>
 
-      <div class="card">
-        <h3 id="why2Title">Real Results</h3>
-        <p id="why2Text">My goal is to help you build a stronger, leaner, and healthier body.</p>
-      </div>
+<section>
+  <h2 id="whyTitle">Why Choose Me</h2>
 
-      <div class="card">
-        <h3 id="why3Title">Online Coaching</h3>
-        <p id="why3Text">Work with me from anywhere in the USA and beyond.</p>
-      </div>
+  <div class="cards">
+
+    <div class="card">
+      <h3 id="why1Title">Personal Attention</h3>
+      <p id="why1Text">Every client gets a custom plan.</p>
     </div>
-  </section>
 
-  <footer>
-    <p id="footerText">© 2026 Elite Body Transform. All rights reserved.</p>
-  </footer>
+    <div class="card">
+      <h3 id="why2Title">Real Results</h3>
+      <p id="why2Text">Focused on real transformation.</p>
+    </div>
 
-  <script>
-    const translations = {
-      en: {
-        title: "Elite Body Transform",
-        subtitle: "Personalized coaching to help you lose fat, build muscle, and transform your body.",
-        instagramBtn: "Instagram",
-        whatsappBtn: "WhatsApp",
-        startBtn: "Start Now",
-        servicesTitle: "Services",
-        card1Title: "Fat Loss",
-        card1Text: "Custom training and nutrition guidance designed to help you burn fat effectively.",
-        card2Title: "Muscle Gain",
-        card2Text: "Structured programs focused on building size, strength, and a better physique.",
-        card3Title: "Personalized Plans",
-        card3Text: "A coaching plan adapted to your body, goals, and lifestyle.",
-        whyTitle: "Why Choose Me",
-        why1Title: "Personal Attention",
-        why1Text: "Every client gets a plan made for their specific goals and needs.",
-        why2Title: "Real Results",
-        why2Text: "My goal is to help you build a stronger, leaner, and healthier body.",
-        why3Title: "Online Coaching",
-        why3Text: "Work with me from anywhere in the USA and beyond.",
-        footerText: "© 2026 Elite Body Transform. All rights reserved."
-      },
-      es: {
-        title: "Elite Body Transform",
-        subtitle: "Coaching personalizado para ayudarte a perder grasa, ganar músculo y transformar tu cuerpo.",
-        instagramBtn: "Instagram",
-        whatsappBtn: "WhatsApp",
-        startBtn: "Empieza Ahora",
-        servicesTitle: "Servicios",
-        card1Title: "Pérdida de Grasa",
-        card1Text: "Entrenamiento y guía nutricional personalizada para ayudarte a quemar grasa de forma efectiva.",
-        card2Title: "Ganancia Muscular",
-        card2Text: "Programas estructurados enfocados en desarrollar masa muscular, fuerza y un mejor físico.",
-        card3Title: "Planes Personalizados",
-        card3Text: "Un plan de coaching adaptado a tu cuerpo, objetivos y estilo de vida.",
-        whyTitle: "Por Qué Elegirme",
-        why1Title: "Atención Personal",
-        why1Text: "Cada cliente recibe un plan hecho según sus metas y necesidades.",
-        why2Title: "Resultados Reales",
-        why2Text: "Mi objetivo es ayudarte a construir un cuerpo más fuerte, definido y saludable.",
-        why3Title: "Coaching Online",
-        why3Text: "Trabaja conmigo desde cualquier lugar de USA y más allá.",
-        footerText: "© 2026 Elite Body Transform. Todos los derechos reservados."
-      }
-    };
+    <div class="card">
+      <h3 id="why3Title">Online Coaching</h3>
+      <p id="why3Text">Train from anywhere.</p>
+    </div>
 
-    function setLanguage(lang) {
-      document.documentElement.lang = lang;
-      for (const id in translations[lang]) {
-        const element = document.getElementById(id);
-        if (element) {
-          element.textContent = translations[lang][id];
-        }
-      }
-      localStorage.setItem("selectedLanguage", lang);
-    }
+  </div>
+</section>
 
-    const savedLanguage = localStorage.getItem("selectedLanguage") || "en";
-    setLanguage(savedLanguage);
-  </script>
+<footer>
+  <p id="footerText">© 2026 Elite Body Transform</p>
+</footer>
+
+<script>
+const translations = {
+
+  en: {
+    title: "Elite Body Transform",
+    subtitle: "Personalized coaching to help you lose fat, build muscle, and transform your body.",
+    instagramBtn: "Instagram",
+    whatsappBtn: "WhatsApp",
+    startBtn: "Start Now",
+    servicesTitle: "Services",
+    card1Title: "Fat Loss",
+    card1Text: "Custom training and nutrition guidance to burn fat effectively.",
+    card2Title: "Muscle Gain",
+    card2Text: "Programs focused on building muscle and strength.",
+    card3Title: "Personalized Plans",
+    card3Text: "Plans adapted to your body and lifestyle.",
+    whyTitle: "Why Choose Me",
+    why1Title: "Personal Attention",
+    why1Text: "Every client gets a custom plan.",
+    why2Title: "Real Results",
+    why2Text: "Focused on real transformation.",
+    why3Title: "Online Coaching",
+    why3Text: "Train from anywhere.",
+    footerText: "© 2026 Elite Body Transform"
+  },
+
+  es: {
+    title: "Elite Body Transform",
+    subtitle: "Coaching personalizado para ayudarte a perder grasa, ganar músculo y transformar tu cuerpo.",
+    instagramBtn: "Instagram",
+    whatsappBtn: "WhatsApp",
+    startBtn: "Empieza Ahora",
+    servicesTitle: "Servicios",
+    card1Title: "Pérdida de Grasa",
+    card1Text: "Entrenamiento y nutrición personalizada para quemar grasa.",
+    card2Title: "Ganancia Muscular",
+    card2Text: "Programas enfocados en músculo y fuerza.",
+    card3Title: "Planes Personalizados",
+    card3Text: "Planes adaptados a tu estilo de vida.",
+    whyTitle: "Por Qué Elegirme",
+    why1Title: "Atención Personal",
+    why1Text: "Cada cliente recibe un plan único.",
+    why2Title: "Resultados Reales",
+    why2Text: "Enfocado en transformación real.",
+    why3Title: "Coaching Online",
+    why3Text: "Entrena desde cualquier lugar.",
+    footerText: "© 2026 Elite Body Transform"
+  }
+
+};
+
+function setLanguage(lang) {
+  for (let key in translations[lang]) {
+    document.getElementById(key).textContent = translations[lang][key];
+  }
+  localStorage.setItem("lang", lang);
+}
+
+window.onload = function() {
+  const saved = localStorage.getItem("lang") || "en";
+  setLanguage(saved);
+};
+</script>
 
 </body>
 </html>
