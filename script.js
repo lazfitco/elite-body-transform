@@ -9,12 +9,16 @@ function updateLanguage(lang) {
     el.textContent = el.dataset[lang];
   });
 
-  langToggle.textContent = lang === "es" ? "EN" : "ES";
+  if (langToggle) {
+    langToggle.textContent = lang === "es" ? "EN" : "ES";
+  }
 }
 
-langToggle.addEventListener("click", () => {
-  currentLang = currentLang === "es" ? "en" : "es";
-  updateLanguage(currentLang);
-});
+if (langToggle) {
+  langToggle.addEventListener("click", () => {
+    currentLang = currentLang === "es" ? "en" : "es";
+    updateLanguage(currentLang);
+  });
+}
 
 updateLanguage(currentLang);
