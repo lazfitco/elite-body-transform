@@ -18,6 +18,7 @@ body {
   margin: 0 auto;
 }
 
+/* HEADER */
 .header {
   background: #000;
   border-bottom: 1px solid rgba(255, 0, 0, 0.2);
@@ -35,6 +36,7 @@ body {
   display: block;
 }
 
+/* BOTÓN IDIOMA */
 .top-controls {
   margin-bottom: 14px;
 }
@@ -49,6 +51,7 @@ body {
   cursor: pointer;
 }
 
+/* MENÚ */
 .nav {
   display: flex;
   justify-content: center;
@@ -62,6 +65,7 @@ body {
   font-weight: 700;
 }
 
+/* HERO */
 .hero {
   text-align: center;
   padding: 70px 20px;
@@ -71,6 +75,11 @@ body {
   color: #ff1a1a;
 }
 
+.hero-buttons {
+  margin-top: 20px;
+}
+
+/* BOTONES */
 .btn {
   display: inline-block;
   padding: 14px 24px;
@@ -90,6 +99,7 @@ body {
   color: #fff;
 }
 
+/* SECCIONES */
 .section {
   padding: 60px 20px;
   text-align: center;
@@ -99,6 +109,7 @@ body {
   background: #111;
 }
 
+/* CARDS */
 .cards {
   display: grid;
   gap: 20px;
@@ -111,25 +122,48 @@ body {
   border-radius: 10px;
 }
 
+/* TELÉFONO */
 .masked-phone {
   margin-top: 15px;
   color: #aaa;
 }
 
+/* 🔥 BOTÓN FLOTANTE WHATSAPP (MEJORADO Y MÁS PEQUEÑO) */
 .floating-whatsapp {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 15px;
+  right: 15px;
   background: #25D366;
-  width: 60px;
-  height: 60px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
+  z-index: 2000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
 .floating-whatsapp img {
-  width: 30px;
+  width: 24px;
+  height: 24px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav {
+    gap: 18px;
+  }
+
+  .floating-whatsapp {
+    width: 44px;
+    height: 44px;
+    bottom: 12px;
+    right: 12px;
+  }
+
+  .floating-whatsapp img {
+    width: 22px;
+    height: 22px;
+  }
 }
