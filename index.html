@@ -1,185 +1,151 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LazFit Elite</title>
-  <meta
-    name="description"
-    content="Entrenamiento personalizado online para pérdida de grasa, ganancia muscular y transformación física."
-  />
-  <link rel="stylesheet" href="style.css" />
+
+  <meta name="description" content="Entrenamiento personalizado online para pérdida de grasa, ganancia muscular y transformación física.">
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <header class="header">
-    <div class="container">
-      <a href="#inicio" class="logo-wrap">
-        <img src="logo.png" alt="LazFit Elite" class="logo-img" />
+
+<header class="header">
+  <div class="container">
+
+    <!-- LOGO (AJUSTADO A .jpeg) -->
+    <a href="#inicio" class="logo-wrap">
+      <img src="logo.png.jpeg" alt="LazFit Elite" class="logo-img">
+    </a>
+
+    <!-- BOTÓN IDIOMA -->
+    <div class="top-controls">
+      <button id="langToggle" class="lang-btn">EN</button>
+    </div>
+
+    <!-- MENÚ -->
+    <nav class="nav">
+      <a href="#inicio" data-es="Inicio" data-en="Home">Inicio</a>
+      <a href="#sobre-mi" data-es="Sobre mí" data-en="About Me">Sobre mí</a>
+      <a href="#servicios" data-es="Servicios" data-en="Services">Servicios</a>
+      <a href="#transformaciones" data-es="Transformaciones" data-en="Transformations">Transformaciones</a>
+      <a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+<section id="inicio" class="hero">
+  <div class="container hero-content">
+
+    <h1>
+      <span id="heroLine1" data-es="TU MEJOR VERSIÓN" data-en="YOUR BEST VERSION">
+        TU MEJOR VERSIÓN
+      </span>
+      <br>
+      <span class="accent" id="heroLine2" data-es="ES TU DECISIÓN" data-en="IS YOUR DECISION">
+        ES TU DECISIÓN
+      </span>
+    </h1>
+
+    <p id="heroText"
+       data-es="Pérdida de grasa, ganancia muscular y asesoría personalizada para conseguir el físico que siempre has querido."
+       data-en="Fat loss, muscle gain, and personalized coaching to achieve the physique you've always wanted.">
+      Pérdida de grasa, ganancia muscular y asesoría personalizada para conseguir el físico que siempre has querido.
+    </p>
+
+    <div class="hero-buttons">
+
+      <!-- WHATSAPP (CAMBIA TU NÚMERO AQUÍ) -->
+      <a href="https://wa.me/1TU_NUMERO_AQUI" target="_blank" class="btn btn-primary">
+        WHATSAPP
       </a>
 
-      <div class="top-controls">
-        <button id="langToggle" class="lang-btn">EN</button>
-      </div>
+      <!-- INSTAGRAM -->
+      <a href="https://instagram.com/lazfit_775" target="_blank" class="btn btn-secondary">
+        INSTAGRAM
+      </a>
 
-      <nav class="nav">
-        <a href="#inicio" data-es="Inicio" data-en="Home">Inicio</a>
-        <a href="#sobre-mi" data-es="Sobre mí" data-en="About Me">Sobre mí</a>
-        <a href="#servicios" data-es="Servicios" data-en="Services">Servicios</a>
-        <a href="#transformaciones" data-es="Transformaciones" data-en="Transformations">Transformaciones</a>
-        <a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a>
-      </nav>
     </div>
-  </header>
 
-  <main>
-    <section id="inicio" class="hero">
-      <div class="container hero-content">
-        <h1>
-          <span
-            id="heroLine1"
-            data-es="TU MEJOR VERSIÓN"
-            data-en="YOUR BEST VERSION"
-          >TU MEJOR VERSIÓN</span>
-          <br />
-          <span
-            class="accent"
-            id="heroLine2"
-            data-es="ES TU DECISIÓN"
-            data-en="IS YOUR DECISION"
-          >ES TU DECISIÓN</span>
-        </h1>
+  </div>
+</section>
 
-        <p
-          id="heroText"
-          data-es="Pérdida de grasa, ganancia muscular y asesoría personalizada para conseguir el físico que siempre has querido."
-          data-en="Fat loss, muscle gain, and personalized coaching to achieve the physique you've always wanted."
-        >
-          Pérdida de grasa, ganancia muscular y asesoría personalizada para conseguir el físico que siempre has querido.
-        </p>
+<section id="sobre-mi" class="section">
+  <div class="container">
+    <h2 data-es="Sobre mí" data-en="About Me">Sobre mí</h2>
+    <p data-es="Ayudo a hombres y mujeres a perder grasa, ganar músculo y mejorar su físico con un plan claro, simple y personalizado."
+       data-en="I help men and women lose fat, gain muscle, and improve their physique with a clear, simple, personalized plan.">
+      Ayudo a hombres y mujeres a perder grasa, ganar músculo y mejorar su físico con un plan claro, simple y personalizado.
+    </p>
+  </div>
+</section>
 
-        <div class="hero-buttons">
-          <a
-            href="https://wa.me/1TU_NUMERO_AQUI"
-            target="_blank"
-            class="btn btn-primary"
-            id="whatsappBtn"
-            data-es="ESCRÍBEME POR WHATSAPP"
-            data-en="MESSAGE ME ON WHATSAPP"
-          >
-            ESCRÍBEME POR WHATSAPP
-          </a>
+<section id="servicios" class="section alt-section">
+  <div class="container">
+    <h2 data-es="Servicios" data-en="Services">Servicios</h2>
 
-          <a
-            href="https://instagram.com/lazfit_775"
-            target="_blank"
-            class="btn btn-secondary"
-            id="instagramBtn"
-            data-es="VER INSTAGRAM"
-            data-en="VIEW INSTAGRAM"
-          >
-            VER INSTAGRAM
-          </a>
-        </div>
-      </div>
-    </section>
+    <div class="cards">
 
-    <section id="sobre-mi" class="section">
-      <div class="container">
-        <h2 data-es="Sobre mí" data-en="About Me">Sobre mí</h2>
-        <p
-          data-es="Ayudo a hombres y mujeres a perder grasa, ganar músculo y mejorar su físico con un plan claro, simple y personalizado."
-          data-en="I help men and women lose fat, gain muscle, and improve their physique with a clear, simple, personalized plan."
-        >
-          Ayudo a hombres y mujeres a perder grasa, ganar músculo y mejorar su físico con un plan claro, simple y personalizado.
+      <div class="card">
+        <h3 data-es="Pérdida de grasa" data-en="Fat Loss">Pérdida de grasa</h3>
+        <p data-es="Programas enfocados en reducir grasa corporal sin perder músculo."
+           data-en="Programs focused on reducing body fat without losing muscle.">
+          Programas enfocados en reducir grasa corporal sin perder músculo.
         </p>
       </div>
-    </section>
 
-    <section id="servicios" class="section alt-section">
-      <div class="container">
-        <h2 data-es="Servicios" data-en="Services">Servicios</h2>
-
-        <div class="cards">
-          <div class="card">
-            <h3 data-es="Pérdida de grasa" data-en="Fat Loss">Pérdida de grasa</h3>
-            <p
-              data-es="Programas enfocados en reducir grasa corporal sin perder músculo."
-              data-en="Programs focused on reducing body fat without losing muscle."
-            >
-              Programas enfocados en reducir grasa corporal sin perder músculo.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3 data-es="Ganancia muscular" data-en="Muscle Gain">Ganancia muscular</h3>
-            <p
-              data-es="Rutinas y guía nutricional para construir un físico más fuerte y estético."
-              data-en="Training plans and nutrition guidance to build a stronger, more aesthetic physique."
-            >
-              Rutinas y guía nutricional para construir un físico más fuerte y estético.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3 data-es="Asesoría online" data-en="Online Coaching">Asesoría online</h3>
-            <p
-              data-es="Acompañamiento personalizado, seguimiento y ajustes según tu progreso."
-              data-en="Personalized coaching, check-ins, and adjustments based on your progress."
-            >
-              Acompañamiento personalizado, seguimiento y ajustes según tu progreso.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="transformaciones" class="section">
-      <div class="container">
-        <h2 data-es="Transformaciones" data-en="Transformations">Transformaciones</h2>
-        <p
-          data-es="Pronto podrás ver aquí resultados de clientes y cambios físicos reales."
-          data-en="Soon you'll be able to see real client results and body transformations here."
-        >
-          Pronto podrás ver aquí resultados de clientes y cambios físicos reales.
+      <div class="card">
+        <h3 data-es="Ganancia muscular" data-en="Muscle Gain">Ganancia muscular</h3>
+        <p data-es="Rutinas y guía nutricional para construir un físico más fuerte y estético."
+           data-en="Training plans and nutrition guidance to build a stronger, more aesthetic physique.">
+          Rutinas y guía nutricional para construir un físico más fuerte y estético.
         </p>
       </div>
-    </section>
 
-    <section id="contacto" class="section alt-section">
-      <div class="container">
-        <h2 data-es="Contacto" data-en="Contact">Contacto</h2>
-        <p
-          data-es="¿Listo para empezar? Escríbeme por WhatsApp o visita mi Instagram."
-          data-en="Ready to start? Message me on WhatsApp or visit my Instagram."
-        >
-          ¿Listo para empezar? Escríbeme por WhatsApp o visita mi Instagram.
+      <div class="card">
+        <h3 data-es="Asesoría online" data-en="Online Coaching">Asesoría online</h3>
+        <p data-es="Acompañamiento personalizado, seguimiento y ajustes según tu progreso."
+           data-en="Personalized coaching, check-ins, and adjustments based on your progress.">
+          Acompañamiento personalizado, seguimiento y ajustes según tu progreso.
         </p>
-
-        <div class="contact-buttons">
-          <a
-            href="https://wa.me/1TU_NUMERO_AQUI"
-            target="_blank"
-            class="btn btn-primary"
-            data-es="WHATSAPP"
-            data-en="WHATSAPP"
-          >
-            WHATSAPP
-          </a>
-
-          <a
-            href="https://instagram.com/lazfit_775"
-            target="_blank"
-            class="btn btn-secondary"
-            data-es="INSTAGRAM"
-            data-en="INSTAGRAM"
-          >
-            INSTAGRAM
-          </a>
-        </div>
       </div>
-    </section>
-  </main>
 
-  <script src="script.js"></script>
+    </div>
+  </div>
+</section>
+
+<section id="transformaciones" class="section">
+  <div class="container">
+    <h2>Transformaciones</h2>
+    <p>Pronto podrás ver resultados reales aquí.</p>
+  </div>
+</section>
+
+<section id="contacto" class="section alt-section">
+  <div class="container">
+    <h2>Contacto</h2>
+
+    <div class="contact-buttons">
+      <a href="https://wa.me/1TU_NUMERO_AQUI" target="_blank" class="btn btn-primary">
+        WHATSAPP
+      </a>
+
+      <a href="https://instagram.com/lazfit_775" target="_blank" class="btn btn-secondary">
+        INSTAGRAM
+      </a>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<script src="script.js"></script>
+
 </body>
 </html>
